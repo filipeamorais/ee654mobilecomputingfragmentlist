@@ -22,6 +22,7 @@ public class ListFgt extends Fragment {
     ArrayList<String> flagList = new ArrayList<>();
     HashMap<String, String> Data = new HashMap<String, String>();
     private OnItemSelectedListener listener;
+
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -52,7 +53,9 @@ public class ListFgt extends Fragment {
             }
         });
         return view;
-    }public interface OnItemSelectedListener {
+    }
+
+    public interface OnItemSelectedListener {
         void onDateTimeItemSelected(String info);
     }
 

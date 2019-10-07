@@ -18,8 +18,10 @@ public class MyAdapter extends ArrayAdapter<String> {
         super(context, textViewResourceId, objects);
         flagList = objects;
     }
+
     @Override
     public int getCount() { return super.getCount(); }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View v = convertView;

@@ -12,6 +12,7 @@ public class MainActivity extends Activity implements ListFgt.OnItemSelectedList
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         if (getResources().getBoolean(R.bool.twoPaneMode)) {
             FragmentManager fm = getFragmentManager();
             FragmentTransaction ft = fm.beginTransaction();
@@ -32,6 +33,7 @@ public class MainActivity extends Activity implements ListFgt.OnItemSelectedList
                     replace(R.id.fragment_container, listFragment).commit();
         }
     }
+
     @Override public void onDateTimeItemSelected(String info) {
         if (getResources().getBoolean(R.bool.twoPaneMode)) {
             DetailFgt fragment = (DetailFgt) getFragmentManager().findFragmentById(R.id.frame2);
